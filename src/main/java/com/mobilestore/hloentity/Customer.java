@@ -1,27 +1,33 @@
 package com.mobilestore.hloentity;
 
+import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="UDAY")
 public class Customer {
 	
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id",length=5,nullable=false)
 	private int cid;
 	@Column(name="firstname",length=15,nullable=false)
 	private String fname;
 	@Column(name="lname",length=15,nullable=true)
 	private String lname;
-	@Column(name="email",length=25,nullable=false,unique=true)
+	@Column(name="email",length=25,unique=true)
 	private String email;
-	@Column(name="mobileno",length=12,nullable=false,unique=true)
+	@Column(name="mobileno",length=12)
 	private Long mobileno;
 	@Column(name="gender",length=10)
 	private String gender;
-	@Column(name="email",length=25,nullable=false)
+	@Column(name="password",length=15)
 	private String password;
 	public int getCid() {
 		return cid;

@@ -15,8 +15,13 @@ public class MobileStoreRepository implements MobileStoreRepositoryInterface{
 	
 	
 	public int customerDetailsInsert(Customer customer) {
+		int m=101;
+		int a=10;
+		int b=25;
+		int c=a+b;
+		System.out.println(c);
 		
-		
+		customer.setCid(m);
 	int i=(int) ht.save(customer);
 	return i;
 	
