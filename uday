@@ -1,0 +1,25 @@
+create or replace PROCEDURE customerprocedure ( cid   IN number,
+      hashvalue  IN varchar2,paramoutput OUT SYS_REFCURSOR
+   )
+  AS
+   BEGIN
+      OPEN paramoutput FOR
+         SELECT * FROM customer c where c.id=cid;
+  END;
+/
+
+
+
+insert into customer values(2,'reddy@gmail','siva','raj','kumar','478965','kiu');
+
+
+	ID EMAIL		     FIRSTNAME	     GENDER	LNAME
+---------- ------------------------- --------------- ---------- ---------------
+  MOBILENO PASSWORD
+---------- ---------------
+	 1 uday@gmail		     uday	     male	reddy
+   9987889 kum
+
+	 2 reddy@gmail		     siva	     raj	kumar
+    478965 kiu
+
